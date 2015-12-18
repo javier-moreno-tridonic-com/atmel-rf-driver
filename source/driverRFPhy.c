@@ -105,8 +105,10 @@ int8_t rf_device_register(void)
 {
     rf_trx_part_e radio_type;
 
+    /*
     if (0 != at24mac_read_eui64(atmel_MAC))
         return -1; //No MAC
+    */
 
     rf_init();
 
