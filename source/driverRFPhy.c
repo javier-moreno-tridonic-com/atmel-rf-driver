@@ -105,8 +105,14 @@ int8_t rf_device_register(void)
 {
     rf_trx_part_e radio_type;
 
+#if defined(YOTTA_CFG_MAC_FROM_CPU_UUID) && (YOTTA_CFG_MAC_FROM_CPU_UUID == 1)
+#warning "Deriving MAC from CPU UUID"
+    mbed_mac_address_eui64(atmel_MAC);
+#else
+#warning "Getting MAC from AT24"
     if (0 != at24mac_read_eui64(atmel_MAC))
         return -1; //No MAC
+#endif
 
     rf_init();
 
