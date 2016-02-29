@@ -30,6 +30,8 @@ static DigitalOut RF_RST(YOTTA_CFG_ATMEL_RF_SPI_RST);
 static DigitalOut RF_SLP_TR(YOTTA_CFG_ATMEL_RF_SPI_SLP);
 static InterruptIn RF_IRQ(YOTTA_CFG_ATMEL_RF_SPI_IRQ);
 
+static void rf_if_interrupt_handler_bf(void); //for bug fixing
+
 static Timeout ack_timer;
 static Timeout cal_timer;
 static Timeout cca_timer;
@@ -280,6 +282,7 @@ void rf_if_reset_radio(void)
   wait(10e-3);
 
   RF_IRQ.rise(&rf_if_interrupt_handler);
+  RF_IRQ.fall(&rf_if_interrupt_handler_bf);
 }
 
 /*
@@ -823,6 +826,10 @@ void rf_if_set_channel_register(uint8_t channel)
  *
  * \return none
  */
+void rf_if_interrupt_handler_bf(void)
+{
+	//printf("\n\r I am here because of bug fix!! \n\r");
+}
 void rf_if_interrupt_handler(void)
 {
   uint8_t irq_status;
