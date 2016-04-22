@@ -1,6 +1,6 @@
 {
   "name": "atmel-rf-driver",
-  "version": "2.0.1-tri-0.1.0",
+  "version": "2.0.1-tri-0.1.6",
   "description": "RF driver for Atmel AT86RF233",
   "keywords": [
     "rf",
@@ -11,7 +11,7 @@
   "dependencies": {
     "nanostack-libservice": "^3.0.0",
     "sal-stack-nanostack": "git@git.cophos.at:chicony-stc/sal-stack-nanostack-private.git#4.0.2-tri-0.1.0",
-    "mbed-drivers": "tridonic-com/mbed-drivers#1.1.0-tri-0.1.0"
+    "mbed-drivers": "tridonic-com/mbed-drivers#b1.1.0-tri-0.1.6"
   },
   "targetDependencies": {}
 }
