@@ -10,8 +10,8 @@
   "license": "Apache-2.0",
   "dependencies": {
     "nanostack-libservice": "^3.0.0",
-    "sal-stack-nanostack": "git@git.cophos.at:chicony-stc/sal-stack-nanostack-private.git#b4.1.0-tri-0.4.0",
-    "mbed-drivers": "tridonic-com/mbed-drivers#b1.5.0-tri-0.4.0"
+    "sal-stack-nanostack": "git@git.cophos.at:chicony-stc/sal-stack-nanostack-private.git#b4.1.0-tri-0.5.0",
+    "mbed-drivers": "tridonic-com/mbed-drivers#b1.5.0-tri-0.5.0"
   },
   "targetDependencies": {}
 }
